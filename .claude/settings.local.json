@@ -1,0 +1,17 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(python:*)",
+      "Bash(ls:*)",
+      "Bash(find:*)",
+      "Bash(BASE=\"G:/My Drive/Work/_GIT \\(2023~\\)/05 DARPA/_paper/PPT/submission/03_submission/Data\" ls:*)",
+      "Bash(dir:*)",
+      "Bash(git --version:*)",
+      "Bash(gh auth:*)",
+      "Bash(du:*)",
+      "Bash(powershell -Command \"\\(Get-ChildItem -Path ''G:\\\\My Drive\\\\Work\\\\_GIT \\(2023~\\)\\\\05 DARPA\\\\_paper\\\\PPT\\\\submission\\\\03_submission\\\\Data'' -Recurse | Measure-Object -Property Length -Sum\\).Sum / 1MB\")",
+      "WebFetch(domain:github.com)",
+      "Bash(git config:*)"
+    ]
+  }
+}
