@@ -1,8 +1,8 @@
-# Squid-Inspired Superpropulsion: Data and Code Repository
+# Squid-Inspired soft superpropulsion: Data and Code Repository
 
 Source data and analysis code for:
 
-**"Squid-inspired superpropulsion"**
+**"Squid-inspired soft superpropulsion"**
 Choi, Singh, Bergerson, Kim, Park, Wallace, Zhang, Hsieh, Asberry, Uyeno, Gilly, Park, Kang, Bose & Bhamla
 
 ---
