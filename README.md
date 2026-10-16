@@ -248,7 +248,7 @@ All analysis code is written in MATLAB.
 | [S26_C/ ChatComparison_*.m](Data_Fig_S26_C_smallBoat/) | Small boat trajectory comparison | Fig. S26 C |
 | [S27 mixing code/](Data_Fig_S27_mixing/code/) | Mixing: dye detection, area/intensity quantification, boundary overlay | Fig. 3 L-M,P,U, Fig. S27 |
 
-The plotted boat values of Fig. 3 O, R-T and Fig. S25 D-E (each position record fitted up to 2.4 body lengths) are in `Data_Fig_03_O.xlsx`, `Data_Fig_03_R,S,T.xlsx` and `Data_Fig_S25_D,E.xlsx`.
+The plotted boat values of Fig. 3 O, R-T and Fig. S25 D-E (each position record fitted up to 2.4 body lengths) are in `Data_Fig_03_O.xlsx`, `Data_Fig_03_R,S,T.xlsx` and `Data_Fig_S25_D,E.xlsx`, with the values of each trial in the sheet `per_trial` of `Data_Fig_S25_D,E.xlsx`. CoT = P/(m g v) from the trial means, with m = 1.2 kg and one body length = 0.26 m.
 
 ---
 
