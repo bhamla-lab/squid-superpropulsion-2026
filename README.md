@@ -108,8 +108,8 @@ Every figure panel from the main text, Supplementary Information, and Supplement
 | | **C** | Nerve infundibulum, denervated condition | N/A | -- |
 | | **D** | Head-first reflex (SLEAP tracking) | N/A | -- |
 | | **E** | Tail-first reflex (SLEAP tracking) | N/A | -- |
-| | **F** | Directional velocity, intact squid (N=45) | [S07_F,G.xlsx](Data_Fig_S07_F,G.xlsx) | -- |
-| | **G** | Directional velocity, funnel-denervated squid (N=34) | [S07_F,G.xlsx](Data_Fig_S07_F,G.xlsx) | -- |
+| | **F** | Directional velocity, intact squid (three recordings) | [S07_F,G.xlsx](Data_Fig_S07_F,G.xlsx) | -- |
+| | **G** | Directional velocity, funnel-denervated squid (three recordings) | [S07_F,G.xlsx](Data_Fig_S07_F,G.xlsx) | -- |
 | **Fig. S8** | **A** | Flange-clamped fabrication (thick nozzles) | N/A | -- |
 | | **B** | Flange-embedded fabrication (thin nozzles) | N/A | -- |
 | | **C** | Press-fit fabrication | N/A | -- |
@@ -249,6 +249,8 @@ All analysis code is written in MATLAB.
 | [S27 mixing code/](Data_Fig_S27_mixing/code/) | Mixing: dye detection, area/intensity quantification, boundary overlay | Fig. 3 L-M,P,U, Fig. S27 |
 
 The plotted boat values of Fig. 3 O, R-T and Fig. S25 D-E (each position record fitted up to 2.4 body lengths) are in `Data_Fig_03_O.xlsx`, `Data_Fig_03_R,S,T.xlsx` and `Data_Fig_S25_D,E.xlsx`, with the values of each trial in the sheet `per_trial` of `Data_Fig_S25_D,E.xlsx`. CoT = P/(m g v) from the trial means, with m = 1.2 kg and one body length = 0.26 m. `chatsweep_poly.m` makes the 2.4 body-length cut and reproduces these values, for example +42.6%, +32.0% and -31.4% for the 15 mm nozzle against the rigid one.
+
+`Data_Fig_S07_F,G.xlsx` holds the velocity traces (signed velocity and speed, mm/s) and the strobe markers of six recordings from SLEAP tracking, three of intact squid (sheets N2-N4) and three of funnel-denervated squid (sheets S2-S4). The sheets Normal2-Normal4 and Severed2-Severed4 are a second export of the same recordings over different time windows. The strobe markers give the flash times and do not by themselves identify reflex responses.
 
 ---
 
