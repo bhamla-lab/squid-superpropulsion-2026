@@ -3,6 +3,7 @@
 % Includes velocity plots from fitted curves
 
 % METHOD:
+%   0. Keeps each track only up to x = 2.4 BL (0.62 m), see process_condition
 %   1. Normalizes data (center & scale) for numerical stability
 %   2. Fits polynomial of adjustable order (default: cubic)
 %   3. Calculates derivatives analytically using polyder()
@@ -735,6 +736,14 @@ function fit_params = process_condition(condition, files, ...
                 if ~isempty(threshold_idx)
                     X = movmedian(X(threshold_idx:end), 15) / pixels_per_mm;
                     time = (0:length(X)-1)' / sampling_freq;
+
+                    % Keep the track only up to x = 2.4 BL (0.62 m). The records run on to 2.5-2.7 BL, where the boat
+                    % slows down, stops at the end of the tank and moves back, and a cubic over the whole record then
+                    % misses the start (revised manuscript, SI boat method).
+                    x_cut_bl = 2.4;
+                    keep = find(X / bl_mm <= x_cut_bl, 1, 'last');
+                    X = X(1:keep);
+                    time = time(1:keep);
 
                     % Fit individual trial to calculate per-trial metrics
                     if max(time) >= target_time
