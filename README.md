@@ -240,15 +240,15 @@ All analysis code is written in MATLAB.
 
 | Code | Purpose | Figures |
 |------|---------|---------|
-| [S03 tracking/](Code_Fig_S03_chromatophore_tracking_algorithm/) | Chromatophore tracking: detection, binarization, noise removal, tracking, filtering, PCA width analysis | Fig. 1 G-J, Fig. S3 |
+| [S03 tracking/](Code_Fig_S03_chromatophore_tracking_algorithm/) | Chromatophore tracking: detection, binarization, noise removal, tracking, filtering, PCA width analysis. `C00_parameters.m` holds the parameters and finds the datasets in `01_raw_data/`. The raw high-speed videos are not deposited | Fig. 1 G-J, Fig. S3 |
 | [S18 theory/](Code_Fig_S18_superpropulsion_theory/) | Superpropulsion theory: lumped ODE (Eq. 1), collapse model, velocity/impulse/energy predictions | Fig. 2 E,I,K-M, Fig. S17-S18 |
 | [03_E,F/](Data_Fig_03_E,F/) | Aerial jet trajectory: frame averaging, binarization, binary averaging, overlay | Fig. 3 E-F |
-| [S25_D,E/ chatsweep_*.m](Data_Fig_S25_D,E_largeBoat_tau_T_dependency/) | Boat tau/T sweep: polynomial + Savitzky-Golay trajectory fitting, velocity/CoT | Fig. 3 I-J, Fig. S25 C |
+| [S25_D,E/ chatsweep_*.m](Data_Fig_S25_D,E_largeBoat_tau_T_dependency/) | Boat tau/T sweep: polynomial fit of each track up to x = 2.4 BL (`chatsweep_poly.m`, the values of the paper) and a Savitzky-Golay alternative (`chatsweep_sgol.m`), velocity/CoT | Fig. 3 I-J, O, R-T, Fig. S25 C-E |
 | [S25_F,G/ VoltageSweep_*.m](Data_Fig_S25_F,G_largeBoat_frequency_dependency/) | Boat frequency sweep: trajectory and velocity analysis | Fig. S25 F-G |
 | [S26_C/ ChatComparison_*.m](Data_Fig_S26_C_smallBoat/) | Small boat trajectory comparison | Fig. S26 C |
 | [S27 mixing code/](Data_Fig_S27_mixing/code/) | Mixing: dye detection, area/intensity quantification, boundary overlay | Fig. 3 L-M,P,U, Fig. S27 |
 
-The plotted boat values of Fig. 3 O, R-T and Fig. S25 D-E (each position record fitted up to 2.4 body lengths) are in `Data_Fig_03_O.xlsx`, `Data_Fig_03_R,S,T.xlsx` and `Data_Fig_S25_D,E.xlsx`, with the values of each trial in the sheet `per_trial` of `Data_Fig_S25_D,E.xlsx`. CoT = P/(m g v) from the trial means, with m = 1.2 kg and one body length = 0.26 m.
+The plotted boat values of Fig. 3 O, R-T and Fig. S25 D-E (each position record fitted up to 2.4 body lengths) are in `Data_Fig_03_O.xlsx`, `Data_Fig_03_R,S,T.xlsx` and `Data_Fig_S25_D,E.xlsx`, with the values of each trial in the sheet `per_trial` of `Data_Fig_S25_D,E.xlsx`. CoT = P/(m g v) from the trial means, with m = 1.2 kg and one body length = 0.26 m. `chatsweep_poly.m` makes the 2.4 body-length cut and reproduces these values, for example +42.6%, +32.0% and -31.4% for the 15 mm nozzle against the rigid one.
 
 ---
 
@@ -265,7 +265,7 @@ Parameters: Eh = 75--500 N/m, D = 15 mm, L = 41 mm, T_acc = 0.05 s, v_jet = 0.29
 
 ## Software Requirements
 
-- **MATLAB** (R2023b or later recommended) for all analysis scripts
+- **MATLAB** (R2023b or later recommended, tested with R2026a) for all analysis scripts, with the Image Processing Toolbox for the S03 tracking, the image steps of `Data_Fig_03_E,F` and the S27 boundary overlays, and the Signal Processing Toolbox (`sgolayfilt`) for the three `*_sgol.m` alternatives, which the values of the paper do not use
 - **DLTdv8** (MATLAB toolbox) for boat trajectory tracking
 - **SLEAP** for squid behavioral tracking (Fig. S7)
 - **OpenFOAM**, **CalculiX**, **preCICE** for FSI simulations
